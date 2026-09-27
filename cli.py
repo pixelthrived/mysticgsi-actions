@@ -124,6 +124,7 @@ def fetch(url, out_dir):
             "-x16",
             "-s16",
             "--continue=true",
+            "--user-agent=Wget/1.21.4",
             "--dir",
             out_dir,
             "--out",
