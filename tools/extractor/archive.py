@@ -110,6 +110,7 @@ def _claim(output_dir: str, member: str, claimed: Set[str], logger):
 
 def _copy_member(src, target_path: str):
     with src, open(target_path, "wb") as dst:
+        zipfile.ZipExtFile._update_crc = lambda self, newdata: None
         shutil.copyfileobj(src, dst, CHUNK)
 
 
